@@ -1,0 +1,259 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neua', Arial, sans-serif;
+}
+
+body {
+    background-color: #0b0c0e;
+    color: #ffffff;
+}
+
+/*Header & Navigation Bar Styling */
+.navbar {
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+    
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.btn-outline {
+    white-space: nowrap;
+    border: 1px solid #c5a059;
+    padding: 8px 16px;
+    color: #c5a059 !important;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: #c5a059;
+    color: #000000 !important;
+}
+
+/* Hero Banner Section */
+.hero-section {
+    position: relative;
+    height: 85vh;
+    /*Dark overlay image linear-gradient */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75 ));
+    background: url('images/background_.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    margin-top: 40px; 
+}
+.hero-content .subtitle {
+    font-size: 10px;
+    color: #C9A86A ;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: gold!important;
+}
+
+.hero-content.description {
+    font-size: 13px;
+    color: #c5a880;;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-gold{
+    white-space: nowrap;
+    display: inline-block;
+    border: 1px solid #c5a059;
+    background-color: #c5a059;;
+    color:black;
+    padding: 10px 22px;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+/*Cookie consent Bar*/
+.cookie-banner {
+    background-color: #131f3a;
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.cookie-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-decline {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-accept {
+    background-color: #d4af37;
+    border: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 7px 16px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 11px;
+}
+
+/* Three Rooms Section*/
+.rooms-section {
+    padding: 60px 40px;
+    background-color: #0b0c0e;
+}
+
+.rooms-section h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.section-desc {
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 35px;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.room-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Tablet - 992px se chota */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 32px !important;
+  }
+  .navbar {
+    padding: 15px 20px !important;
+  }
+  .container {
+    padding: 0 20px !important;
+  }
+}
+
+/* Mobile Landscape - 768px se chota */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .hero-content h1 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+  .btn-gold {
+    padding: 8px 18px !important;
+    font-size: 10px !important;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .nav-links {
+    display: none !important; /* Mobile me menu hide */
+  }
+  .image-grid, .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+/* Small Mobile - 576px se chota */
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 24px !important;
+  }
+  .hero-content p {
+    font-size: 14px !important;
+  }
+  .btn-gold {
+    width: 90% !important;
+    display: block !important;
+    margin: 15px auto !important;
+    background-color: #c5a059 !important;
+    color: black !important;
+  }
+  .footer {
+    text-align: center !important;
+  }
+}
